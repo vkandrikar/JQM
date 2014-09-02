@@ -1,0 +1,471 @@
+<!-- 
+http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css
+http://code.jquery.com/jquery-1.10.2.min.js
+http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js
+ -->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<title>jQuery Sample 1</title>
+	</head>
+
+	<body>
+		<!-- 
+			simple page with header, main & footer
+		-->
+		<!-- <div data-role="page" id="pageone12">
+			<div data-role="header">
+				<h1>Insert Page Title Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>Insert Content Here</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Insert Footer Text Here</h1>
+			</div>
+		</div> -->
+
+		<!-- 
+			navigative, dialog box, transition, transition direction
+		-->
+		<!-- <div data-role="page" id="page-one">
+			<div data-role="main" class="ui-content">
+				<a href="#page-two" data-transition="slide">Go to Page Two</a>
+			</div>
+		</div>
+
+		<div data-role="page" id="page-two">
+			<div data-role="main" class="ui-content">
+				<a href="#page-one" data-transition="slide" data-direction="reverse">Go to Page One</a>
+				<a href="#page-three" data-transition="flow">Show Dialog Box</a>
+			</div>
+		</div>
+
+		<div data-role="page" data-dialog="true" id="page-three">
+			<div data-role="main" class="ui-content">
+				<a href="#page-one" data-transition="turn">Go to Page One</a>
+				<a href="#page-two" data-transition="pop">Go to Pagw Two</a>
+			</div>
+		</div> -->
+
+		<!-- 
+			Buttons
+		-->
+		<!-- <div data-role="page" id="page-one">
+			<div data-role="header">
+				<h1>Insert Page Title Here</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<input type="button" value="Button1">
+				<button class="ui-btn">Button2</button>
+				<a href="#" class="ui-btn">Button3</a>
+
+				<b>					
+					data-role="controlgroup": grouped the buttons 
+					data-type="horizontal|verticle" 
+				</b>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#" class="ui-btn">Button1</a>
+					<a href="#page-two" class="ui-btn">Button2</a>
+					<a href="#page-three" class="ui-btn">Button3</a>
+				</div>
+
+				<b>
+					INLINE BUTTONS: By default, buttons take up the full width of the screen. If you want a button that is only as wide as its content, or if you want two or more buttons to appear side by side, add the "ui-btn-inline" class
+				</b>
+				<a href="#" class="ui-btn ui-btn-inline ui-btn-b">Home</a>
+				<a href="#" class="ui-btn ui-btn-inline ui-corner-all">Gallery</a>
+				<a href="#" class="ui-btn ui-btn-inline ui-shadow">FAQ</a>
+				<a href="#" class="ui-btn ui-btn-inline ui-mini">Contact Us</a>
+			</div>
+
+			<div data-role="footer">
+				<h1>Insert Footer Text Here</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="page-two">
+			<div data-role="main" class="ui-content">
+				<b> 
+					data-rel="back" attribute ignore the anchor's href value
+					& redirected to the previous page (page1)
+				</b>
+				<a href="#page-three" data-rel="back" class="ui-btn">Back</a>
+			</div>
+		</div>
+
+		<div data-role="page" id="page-three">
+			<div data-role="main" class="ui-content">
+				<b>
+					data-rel="back" attribute ignore the anchor's href value
+					& redirected to the previous page (page1)
+				</b>
+				<a href="#page-two" data-rel="back" class="ui-btn">Back</a>
+			</div>
+		</div> -->
+
+		<!--
+			BUTTON ICONS
+		-->
+		<!-- <div data-role="page" id="pageone">
+			<div data-role="main" class="ui-content">
+				<a href="#" class="ui-btn ui-icon-search ui-btn-icon-right">Search</a>
+				
+				<button class="ui-btn ui-icon-back ui-btn-icon-left">Back</button>
+
+				<input type="button" data-icon="home" value="Home">
+
+				<a href="#" class="ui-btn ui-icon-refresh ui-btn-icon-notext">Refresh</a>
+
+				<a href="#" class="ui-btn ui-icon-refresh ui-btn-icon-notext ui-alt-icon">Refresh</a>
+			</div>
+		</div> -->
+		
+		<!--
+			POPUP
+		-->
+		<!-- <div data-role="page" id="pageone">
+			<div data-role="main" class="ui-content">
+				<a href="#samplePopup" data-rel="popup" class="ui-btn ui-btn-inline">Show Popup</a>
+
+				<a href="#samplePopup" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="window">Popup will appear centered within the window</a>
+
+				<a href="#samplePopup" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="#test">Popup is positioned over the element with a specified #id</a>
+
+				<a href="#samplePopup" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="origin">Default. Popup is positioned directly over the clicked element</a>
+
+				<a href="#sampleDialogPopup" data-rel="popup" class="ui-btn ui-btn-inline" data-position-to="window" data-transition="slide">Slide Transition</a>
+
+				<a href="#imagePopup" data-rel="popup" data-transition="flip">
+					<img src="images/2.png">
+				</a>
+
+				<b>
+					data-dismissible="false|true" : enable/disable popup close on clicking outside or with escape key
+				</b>
+				<div id="samplePopup" data-role="popup" class="ui-content" data-dismissible="true">
+					<a href="#" data-rel="back" class="ui-btn ui-icon-delete ui-shadow ui-btn-icon-notext ui-btn-right">Close</a>
+					This is sample popup.
+				</div>
+
+				<div id="sampleDialogPopup" data-role="popup" class="ui-content" data-dismissible="false">
+					<div data-role="header"><h1>Header</h1></div>
+					
+					<div data-role="main" class="ui-content">
+						<p>This is sample dialog popup.</p>
+						<a href="#" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-b ui-btn-inline ui-shadow" data-rel="back">Back</a>
+						<p>This is sample dialog popup.</p>
+					</div>
+					
+					<div data-role="footer">Footer</div>
+				</div>
+
+				<div id="imagePopup" data-role="popup">
+					<a href="#" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Back</a>
+					<img src="images/1.png">
+				</div>
+
+				<div id="test">This is test div</div>
+			</div>
+		</div> -->
+
+		<!--
+			Toolbars
+		-->
+		<!-- <div data-role="page" id="toolbarPage">
+			<div data-role="header" data-position="fixed" data-fullscreen="true">
+				<a href="#" class="ui-btn ui-icon-back ui-btn-inline ui-btn-icon-left">Back</a>
+				<h1>This is Header</h1>
+				<button class="ui-btn ui-icon-search ui-btn-inline ui-btn-icon-left">Search</button>
+			</div>
+
+			<div data-role="main">
+				<p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-fullscreen="false" style="text-align: center;">
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#" class="ui-btn ui-icon-home ui-btn-inline ui-btn-icon-left">Home</a>
+					<a href="#" class="ui-btn ui-icon-star ui-btn-inline ui-btn-icon-left">Favorite</a>
+					<a href="#" class="ui-btn ui-icon-gear ui-btn-inline ui-btn-icon-left">Setting</a>
+				</div>
+			</div>
+		</div> -->
+
+		<!--
+			Navigation Bar
+		-->
+
+		<!-- <div data-role="page" id="homePage">
+			<div data-role="header">
+				<h1>This is Header</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+						<li><a href="#GalleryPage" data-icon="heart">Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="main">
+				<h1>This is Home Page</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="GalleryPage">
+			<div data-role="header">
+				<h1>This is Header</h1>
+				<div data-role="navbar" data-iconpos="left">
+					<ul>
+						<li><a href="#homePage" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="heart" class="ui-btn-active ui-state-persist">Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="main">
+				<h1>This is Gallery Page</h1>
+			</div>
+		</div> -->
+
+		<!--
+			Panels
+		-->
+
+		<!-- <div data-role="page" id="panelPage">
+			<div data-role="header"><h1>Header</h1></div>
+			<div data-role="main" class="ui-content">
+				<p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
+				<a href="#myPanel1" class="ui-btn ui-btn-inline">Open Panel1</a>
+				<a href="#myPanel2" class="ui-btn ui-btn-inline">Open Panel2</a>
+			</div>
+			<div data-role="footer"><h1>Footer</h1></div>
+
+			<div data-role="panel" id="myPanel1" data-dismissible="false" data-display="reveal" data-position-fixed="true">
+				<h1>Panel1 Header</h1>
+				Panel1 Content
+				<a href="#panelPage" data-rel="close" class="ui-btn ui-btn-inline">Close Panel1</a>
+			</div>
+
+			<div data-role="panel" id="myPanel2" data-dismissible="true" data-display="overlay" data-position="right">
+				<h1>Panel2 Header</h1>
+				Panel2 Content
+				<a href="#panelPage" data-rel="close" class="ui-btn ui-btn-inline">Close Panel2</a>
+			</div>
+		</div> -->
+
+		<!--
+			Collapsible
+		-->
+
+		<!-- <div data-role="page">
+			<div data-role="collapsibleset">
+				<div data-role="collapsible" data-collapsed="true">
+					<h1>Show Me</h1>
+					<div data-role="collapsible" data-collapsed="false">
+						<h1>Open This</h1>
+						<div><h2>This is my content</h2></div>
+					</div>
+				</div>
+				<div data-role="collapsible" data-collapsed="false">
+					<h1>Open This</h1>
+					<div><h2>This is my content</h2></div>
+				</div>
+				<div data-role="collapsible" data-collapsed="false">
+					<h1>Open This</h1>
+					<div><h2>This is my content</h2></div>
+				</div>
+			</div>
+		</div> -->
+
+		<!--
+			Grid
+		-->
+
+		<!-- <div data-role="page">
+			<div data-role="main">
+				<div class="ui-grid-a" style="border:1px solid black;">
+					<div class="ui-block-a"><span>Some Text a</span></div>
+					<div class="ui-block-b"><span>Some Text b</span></div>
+				</div>
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><span>Some Text a</span></div>
+					<div class="ui-block-b"><span>Some Text b</span></div>
+					<div class="ui-block-c"><span>Some Text c</span></div>
+					<div class="ui-block-a"><span>Some Text a</span></div>
+					<div class="ui-block-b"><span>Some Text b</span></div>
+					<div class="ui-block-a"><span>Some Text a</span></div>
+				</div>
+				<div class="ui-grid-e ui-responsive">
+					<div class="ui-block-a"><span>Some Text a</span></div>
+					<div class="ui-block-b"><span>Some Text b</span></div>
+					<div class="ui-block-c"><span>Some Text c</span></div>
+					<div class="ui-block-d"><span>Some Text d</span></div>
+					<div class="ui-block-e"><span>Some Text e</span></div>
+					<div class="ui-block-a"><span>Some Text a</span></div>
+				</div>
+			</div>
+		</div> -->
+
+		
+		<!--
+			List Views
+		-->
+
+		<!-- <div data-role="page">
+			<div data-role="main" class="ui-content">
+				<h2>Ordered list:</h2>
+				<ol data-role="listview" data-inset="false">
+					<li>List Item1</li>
+					<li>List Item2</li>
+					<li>List Item3</li>
+				</ol>
+
+				<h2>Unordered list:</h2>
+				<ul data-role="listview" data-inset="true">
+					<li>List Item1</li>
+					<li>List Item2</li>
+					<li>List Item3</li>
+				</ul>
+
+				<h2>Unordered list with clicks:</h2>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#">List Item1</a></li>
+					<li><a href="#">List Item2</a></li>
+					<li><a href="#">List Item3</a></li>
+				</ul>
+
+				<h2>Unordered list with list divider:</h2>
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">Male</li>
+					<li><a href="#">Vijay</a></li>
+					<li><a href="#">Jay</a></li>
+					<li data-role="list-divider">Female</li>
+					<li><a href="#">Guddy</a></li>
+				</ul>
+
+				<h2>Unordered list with autolist divider:</h2>
+				<ul data-role="listview" data-autodividers="true" data-inset="true">
+					<li><a href="#">Vijay</a></li>
+					<li><a href="#">Jay</a></li>
+					<li><a href="#">Guddy</a></li>
+				</ul>
+			</div>
+		</div> -->
+
+
+		<!--
+			List Content
+		-->
+
+		<!-- <div data-role="page">
+			<div data-role="main" class="ui-content">
+				<h2>pre icons</h2>
+				<ul data-role="listview" data-autodividers="true" data-inset="true">
+					<li><a href="#">Vijay</a></li>
+					<li data-icon="plus"><a href="#">Jay</a></li>
+					<li data-icon="location"><a href="#">Piyush</a></li>
+					<li data-icon="false"><a href="#">Guddy</a></li>
+				</ul>
+
+				<h2>with custom img icons</h2>
+				<ul data-role="listview" data-autodividers="true" data-inset="true">
+					<li><a href="#"><img src="images/icons/Argentina.png" alt="Argentina" class="ui-li-icon">Vijay</a></li>
+					<li><a href="#"><img src="images/icons/India.png" alt="India" class="ui-li-icon">Jay</a></li>
+					
+					<li>
+						<a href="#">
+							<img src="images/icons/Sweden.png" alt="Sweden">
+							<h1>Piyush</h1>
+							<p>Her you can put description</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<img src="images/icons/Switzerland.png" alt="Switzerland">
+							<h1>Guddy</h1>
+							<p>Her you can put description</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<img src="images/icons/Australia.png" alt="Australia">
+							<h1>Atul</h1>
+							<p>Her you can put description</p>
+						</a>
+						<a href="#" data-icon="star">like</a>
+					</li>
+				</ul>
+
+				<h2>Bubble count:</h2>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#">Inbox<span class="ui-li-count">25</span></a></li>
+					<li><a href="#">Sent<span class="ui-li-count">432</span></a></li>
+					<li><a href="#">Trash<span class="ui-li-count">7</span></a></li>
+				</ul>
+			</div>
+		</div> -->
+
+
+		<!--
+			Filter
+		-->
+
+		<div data-role="page">
+			<div data-role="main" class="ui-content">
+				<form class="ui-filterable">
+					<input data-type="search" id="searchIO" placeholder="search by name">
+				</form>
+
+				<ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true" data-input="#searchIO">
+					<li data-filtertext="fav"><a href="">Vijay</a></li>
+					<li><a href="">Vivek</a></li>
+					<li><a href="">Jay</a></li>
+					<li data-filtertext="fav"><a href="">Piyush</a></li>
+					<li><a href="">Guddy</a></li>
+					<li data-filtertext="fav"><a href="">Atul</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!--
+			Theme
+		-->
+
+		<!-- <div data-role="page">
+			<div data-role="header" class="data-theme-b">
+				<h1>Header</h1>
+				<a href="#" class="ui-btn ui-btn-b">Btn1</a>
+				<a href="#" data-theme="b">Btn1</a>
+			</div>
+			
+			<div data-role="main" class="ui-content myCustomTheme">
+				<p>this is sample text</p>
+			</div>
+
+			<div data-role="footer">
+				<h1>Footer</h1>
+			</div>
+		</div> -->
+	</body>
+
+	<style>
+	.myCustomTheme {
+		font-weight: bold;
+		color: white;
+		background-color: green;
+	}
+	</style>
+</html>
